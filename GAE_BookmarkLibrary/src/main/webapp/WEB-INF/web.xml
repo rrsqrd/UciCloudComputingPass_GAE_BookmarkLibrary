@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+	<!-- BookmarkPostLibrary.java servlet-->  	
+  	<servlet>  	
+  		<servlet-name>BookmarkPostLibrary</servlet-name>
+  		<servlet-class>com.rrsqrd.uci.bookmarkAppEngine.BookmarkPostLibrary</servlet-class>
+  	</servlet>
+  	 <servlet-mapping>
+  		<servlet-name>BookmarkPostLibrary</servlet-name>
+  		<url-pattern>/login/*</url-pattern>
+  	</servlet-mapping>
+
+    <!-- ShowBookmarkPosts.java servlet-->  	
+  	<servlet>
+  		<servlet-name>ShowBookmarkPosts</servlet-name>
+  		<servlet-class>com.rrsqrd.uci.bookmarkAppEngine.actions.ShowBookmarkPosts</servlet-class>
+  	</servlet>
+  	 <servlet-mapping>
+  		<servlet-name>ShowBookmarkPosts</servlet-name>
+  		<url-pattern>/show/*</url-pattern>
+  	</servlet-mapping>  
+  	  
+    <!-- CreateBookmarkPost.java servlet -->
+  	<servlet>
+  		<servlet-name>CreateBookmarkPost</servlet-name>
+  		<servlet-class>com.rrsqrd.uci.bookmarkAppEngine.actions.CreateBookmarkPost</servlet-class>
+  	</servlet>
+  	 <servlet-mapping>
+  		<servlet-name>CreateBookmarkPost</servlet-name>
+  		<url-pattern>/create/*</url-pattern>  		  		
+  	</servlet-mapping>  	
+  	  	
+    <!-- RedirectBookmarkPosts.java servlet-->  	
+  	<servlet>
+  		<servlet-name>redirect</servlet-name>
+  		<servlet-class>com.rrsqrd.uci.bookmarkAppEngine.actions.RedirectBookmarkPosts</servlet-class>
+  	</servlet>
+  	 <servlet-mapping>
+  		<servlet-name>redirect</servlet-name>
+  		<url-pattern>/redirect/*</url-pattern>  		  		
+  	</servlet-mapping>  	
+
+    <!-- UpdateBookmarkPost.java servlet-->  	
+  	<servlet>
+  		<servlet-name>update</servlet-name>
+  		<servlet-class>com.rrsqrd.uci.bookmarkAppEngine.actions.UpdateBookmarkPost</servlet-class>
+  	</servlet>
+  	 <servlet-mapping>
+  		<servlet-name>update</servlet-name>
+  		<url-pattern>/update/*</url-pattern>
+  	</servlet-mapping>  	
+  	
+	<!-- DeleteBookmarkPost.java servlet-->  	
+  	<servlet>
+  		<servlet-name>delete</servlet-name>
+  		<servlet-class>com.rrsqrd.uci.bookmarkAppEngine.actions.DeleteBookmarkPost</servlet-class>
+  	</servlet>
+  	 <servlet-mapping>
+  		<servlet-name>delete</servlet-name>
+  		<url-pattern>/delete/*</url-pattern>
+  	</servlet-mapping>  	
+  
+  
+  	<security-constraint>
+    	<web-resource-collection>
+      	<web-resource-name>bookmarkPost</web-resource-name>
+      	<url-pattern>/*</url-pattern>
+    	</web-resource-collection>
+    
+    	<user-data-constraint>
+      	<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+    	</user-data-constraint>
+  	</security-constraint>  
+</web-app>

@@ -1,0 +1,36 @@
+   	.bmrkTable {
+		border:1px solid #DDE5FF;		
+		font-size: 12px;
+	}
+
+	#bmrk {
+	    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	    border-collapse: collapse;
+	    width: 100%;
+	}		
+	
+	#bmrk td, #brmk th {
+	    border:1px solid #DDE5FF;	    
+	    padding: 3px;
+	}
+	
+	
+	#bmrk tr:nth-child(even)
+		{background-color: #f2f2f2;}
+
+		
+	#bmrk tr:hover 
+		{background-color: #ddd;}
+
+	#bmrk th {
+	    padding-top: 12px;
+	    padding-bottom: 12px;
+	    text-align: left;
+	    background-color: #4CAF50;
+	    color: white;
+	}
+
+	a{
+		color:blue;
+	}
+	
